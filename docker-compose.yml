@@ -35,11 +35,12 @@ services:
       args:
         WORKDIR: $WORKDIR
         CONTAINER_PORT: $CONTAINER_PORT
-    command: yarn run dev
+    command: npm run serve
+
     volumes:
       - ./front:/$WORKDIR
     ports:
-      - "$FRONT_PORT:$CONTAINER_PORT"
+      - "$FRONT_PORT:$FRONT_PORT"
     depends_on:
       - back
     tty: true
