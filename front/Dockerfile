@@ -15,3 +15,5 @@ RUN echo ${CONTAINER_PORT}
 WORKDIR ${HOME}
 
 EXPOSE ${CONTAINER_PORT}
+
+RUN apk update && npm install -g @vue/cli
